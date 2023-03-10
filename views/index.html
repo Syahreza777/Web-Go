@@ -1,0 +1,35 @@
+{{define "index"}}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Web</title>
+        <link rel="stylesheet" href="/static/site.css">
+    </head>
+    <body>
+
+        <h1>Selamat Datang diWebsite Saya</h1>
+
+        <br>
+
+        {{$text := .Text}}
+            
+            {{range $i, $element := .RoutePost}}
+            <h3>{{$element.Post}}</h3>
+
+         <p>{{$text}}
+
+            <br>
+            <a href="{{$element.Link}}">Baca Selengkapnya</a>
+        </p>
+            <br>
+            {{end}}
+
+        </h3>
+       
+        <br>
+        
+    </body>
+</html>
+
+{{end}}

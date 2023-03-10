@@ -1,0 +1,31 @@
+
+{{define "post"}}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Belajar Web</title>
+        <link rel="stylesheet" href="/static/site.css">
+    </head>
+    <body>
+
+        <h2>{{.Title}}</h2>
+
+        <img src="{{.ImgSrc}}" alt="">
+
+        <p>{{.Deskripsi}}</p>
+        <br>
+
+        {{template "form-message"}}
+        <br>
+
+           {{range $i, $val := .Message}}
+           <p><b>{{$val.Nama}}</b> : {{$val.Komen}}</p>
+           <br>
+           {{end}}
+
+    </body>
+</html>
+
+{{end}}
+
